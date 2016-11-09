@@ -22,8 +22,9 @@ GameObject:
   - 212: {fileID: 212000010022477830}
   - 50: {fileID: 50000010909278566}
   - 61: {fileID: 61000013430115332}
-  - 114: {fileID: 114000012399188264}
   - 114: {fileID: 114000013207256010}
+  - 114: {fileID: 114000012082942768}
+  - 114: {fileID: 114000014006562544}
   m_Layer: 0
   m_Name: testPlayer
   m_TagString: Untagged
@@ -75,7 +76,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 16, y: 16}
---- !u!114 &114000012399188264
+--- !u!114 &114000012082942768
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -83,10 +84,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012789789448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee43386f068cea5418f7de1eea6b1332, type: 3}
+  m_Script: {fileID: 11500000, guid: f82a131f8cee773479742b5b7661e7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: {x: 0, y: 0}
 --- !u!114 &114000013207256010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,15 +98,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6d26095b0fee945aec38ad07aed17a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionButton: 0
+  leftArrow: 0
+  downArrow: 0
+  rightArrow: 0
+  upArrow: 0
   acceptingInput: 1
   mouseXokay: 0
   mouseYokay: 0
   mousePoint: {x: 0, y: 0}
   target: {x: 0, y: 0}
-  absVelX: 0
-  absVelY: 0
-  standing: 0
-  standingThreshold: 1
+  current: {x: 0, y: 0}
+  calc: {x: 0, y: 0}
+--- !u!114 &114000014006562544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012789789448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2faecfc17e4cf64a8bfda5c6a09978c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputState: {fileID: 0}
+  isPlayer: 0
+  forcedMove: 0
+  ignoreBounds: 0
+  current: {x: 0, y: 0}
+  target: {x: 0, y: 0}
 --- !u!212 &212000010022477830
 SpriteRenderer:
   m_ObjectHideFlags: 1
