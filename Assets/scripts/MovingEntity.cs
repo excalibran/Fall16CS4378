@@ -9,6 +9,8 @@ public class MovingEntity : MonoBehaviour {
   private Vector2 bounds;
   public bool ignoreBounds = false;
 
+  Rigidbody2D rig;
+
   public Vector2 target = Vector2.zero;
 
   private float playerVelocity = 15f;
@@ -18,6 +20,7 @@ public class MovingEntity : MonoBehaviour {
   void Start()
   {
     inputState = GetComponent<InputState>();
+    rig = GetComponent<Rigidbody2D>();
   }
 
   // Update is called once per frame
@@ -39,10 +42,9 @@ public class MovingEntity : MonoBehaviour {
       target = forcedMoveTarget;
     }
 
-    transform.position = Vector2.Lerp(current, target, playerVelocity * Time.deltaTime);
+    Debug.DrawRay(current, target.normalized * 10, Color.red, .1f, false);
 
-    Debug.DrawLine(current, target, Color.red, .1f, false);
-    
+    transform.position = Vector2.Lerp(current, target, playerVelocity * Time.deltaTime);
   }
 
 }

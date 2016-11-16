@@ -17,16 +17,19 @@ public class InputState : MonoBehaviour {
   public Vector2 current = Vector2.zero;
   public Vector2 calc = Vector2.zero;
 
+  private Rigidbody2D rgd;
+
   
 
   void Awake () {
-      
-	}
+    rgd = GetComponent<Rigidbody2D>();
+  }
 	
 	// Update is called once per frame
 	void Update () {
-    
-    
+
+    rgd.WakeUp();
+
     actionButton = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return);
     leftArrow = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
     downArrow = Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S);
