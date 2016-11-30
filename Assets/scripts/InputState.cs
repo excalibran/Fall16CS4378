@@ -17,6 +17,13 @@ public class InputState : MonoBehaviour {
   public Vector2 current = Vector2.zero;
   public Vector2 calc = Vector2.zero;
 
+  public float xMin, xMax, yMin, yMax;
+  public GameObject shot;
+  public GameObject shotSpawn;
+	public float fireRate = .5f;
+	private float nextFire = 0.0f;
+
+
   private Rigidbody2D rgd;
 
   
@@ -70,6 +77,12 @@ public class InputState : MonoBehaviour {
       }
 
       target += calc;
+
+			if (actionButton && Time.time > nextFire) {
+				nextFire = Time.time + fireRate;
+				Instantiate (shot, shotSpawn.transform.position, shotSpawn.transform.rotation);
+	  }
+	  rgd.position = new Vector2 (Mathf.Clamp(rgd.position.x, xMin, xMax),Mathf.Clamp(rgd.position.y, yMin, yMax));	
     }
   }
 
