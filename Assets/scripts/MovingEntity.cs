@@ -1,50 +1,82 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class MovingEntity : MonoBehaviour {
-
-  public InputState inputState;
-  public bool forcedMove = false;
-  private Vector2 forcedMoveTarget;
-  private Vector2 bounds;
-  public bool ignoreBounds = false;
+public class MovingEntity : MonoBehaviour
+{
 
   Rigidbody2D rig;
+  DodgeDetection dodgeDetector;
+  RaycastHit2D seePlayerRight;
+  RaycastHit2D seePlayerLeftRight;
 
-  public Vector2 target = Vector2.zero;
+  List<RaycastHit2D> feel;
 
-  private float playerVelocity = 15f;
+  public Vector2 target;
+  public Vector2 current;
+  public Vector2 direction;
+  public Vector2 dodgeModifier;
+  public List<Vector2> waypoint;
+
+
+  private int _curWay = 0;
+  public int currentWaypoint
+  {
+    get
+    {
+      return _curWay;
+    }
+    set
+    {
+      if (_curWay < waypoint.Count - 1 && value != 0)
+      {
+        _curWay = value;
+        Debug.Log("up " + _curWay);
+      }
+      else
+      {
+        _curWay = 0;
+        Debug.Log(_curWay);
+      }
+    }
+  }
+
+  public float speed = 35f;
 
   // Use this for initialization
 
   void Start()
   {
-    inputState = GetComponent<InputState>();
     rig = GetComponent<Rigidbody2D>();
+    dodgeDetector = GetComponentInChildren<DodgeDetection>();
+    dodgeModifier = Vector2.zero;
+    current = transform.position;
+
+    currentWaypoint = 0;
+    target = waypoint[currentWaypoint];
   }
 
   // Update is called once per frame
   void Update()
   {
-    Vector2 current = new Vector2(transform.position.x, transform.position.y);
-
-    if (!forcedMove)
-    {
-      target = inputState.target;
-      
-    }
-    else {
-
-      if (Input.GetKey(KeyCode.J)) {
-        forcedMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-      }
-      
-      target = forcedMoveTarget;
-    }
-
-    Debug.DrawRay(current, target.normalized * 10, Color.red, .1f, false);
-
-    transform.position = Vector2.Lerp(current, target, playerVelocity * Time.deltaTime);
+    target = waypoint[currentWaypoint];
+    dodgeModifier = dodgeDetector.dodgeModifier;
   }
 
+  void FixedUpdate()
+  {
+
+    current = transform.position;
+
+    if ((current - target).magnitude < 1)
+    {
+      currentWaypoint++;
+    }
+    else
+    {
+      direction = (target - current).normalized * speed;
+    }
+
+    rig.velocity = direction + (dodgeModifier * speed * 5) ;
+  } 
 }

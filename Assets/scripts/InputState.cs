@@ -10,9 +10,6 @@ public class InputState : MonoBehaviour {
   public bool upArrow;
   
   public bool acceptingInput = true;
-  public bool mouseXokay;
-  public bool mouseYokay;
-  public Vector2 mousePoint = Vector2.zero;
   public Vector2 target = Vector2.zero;
   public Vector2 current = Vector2.zero;
   public Vector2 calc = Vector2.zero;
@@ -46,18 +43,6 @@ public class InputState : MonoBehaviour {
 
     if (acceptingInput) {
 
-      /*
-      mousePoint = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-      mousePoint = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-
-      mouseXokay = (mousePoint.x > 0 && mousePoint.x < 1) ? true : false;
-      mouseYokay = (mousePoint.y > 0 && mousePoint.y < 1) ? true : false;
-
-      if ( mouseXokay && mouseYokay) {
-        target = Camera.main.ScreenToWorldPoint(Input.mousePosition); ;
-      }
-      */
-
       calc = Vector2.zero;
 
       if (leftArrow){
@@ -81,9 +66,11 @@ public class InputState : MonoBehaviour {
 			if (actionButton && Time.time > nextFire) {
 				nextFire = Time.time + fireRate;
 				Instantiate (shot, shotSpawn.transform.position, shotSpawn.transform.rotation);
-	  }
-	  rgd.position = new Vector2 (Mathf.Clamp(rgd.position.x, xMin, xMax),Mathf.Clamp(rgd.position.y, yMin, yMax));	
+	    }
+      rgd.MovePosition(target);
+ 
+	    //rgd.position = new Vector2 (Mathf.Clamp(rgd.position.x, xMin, xMax),Mathf.Clamp(rgd.position.y, yMin, yMax));	
     }
   }
 
-}
+} 

@@ -7,11 +7,14 @@ public class Strategy : MonoBehaviour {
   public bool valid;
   public GameObject[] prefabs;
   public GameObject spawner;
-  public Vector2 pos = Vector2.zero;
+  public Vector2 pos;
+
 
   // Use this for initialization
   void Start () {
-    pos = spawner.transform.position;
+    valid = false;
 	}
+
+
 	//end
 }

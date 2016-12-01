@@ -13,7 +13,7 @@ public class EnemyDeath : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Shot") {
 			Destroy (other.gameObject);
-			gameObject.SetActive (false);
+			GameObjectUtil.Destroy(gameObject);
 			ScoreTracker.score += 10;
 		}
 	}

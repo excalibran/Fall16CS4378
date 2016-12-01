@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000012789789448}
   m_IsPrefabParent: 1
+--- !u!1 &1000010984214350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012023781614}
+  m_Layer: 0
+  m_Name: ShotSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012789789448
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,7 +39,6 @@ GameObject:
   - 61: {fileID: 61000013430115332}
   - 114: {fileID: 114000013207256010}
   - 114: {fileID: 114000012082942768}
-  - 114: {fileID: 114000014006562544}
   m_Layer: 0
   m_Name: testPlayer
   m_TagString: Player
@@ -32,6 +46,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4000012023781614
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010984214350}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000012673306954}
+  m_RootOrder: 0
 --- !u!4 &4000012673306954
 Transform:
   m_ObjectHideFlags: 1
@@ -39,10 +66,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012789789448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.57, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000012023781614}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!50 &50000010909278566
@@ -52,7 +80,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012789789448}
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -101,12 +129,9 @@ MonoBehaviour:
   actionButton: 0
   leftArrow: 0
   downArrow: 0
-  rightArrow: 1
+  rightArrow: 0
   upArrow: 0
   acceptingInput: 1
-  mouseXokay: 0
-  mouseYokay: 0
-  mousePoint: {x: 0, y: 0}
   target: {x: 0, y: 0}
   current: {x: 0, y: 0}
   calc: {x: 0, y: 0}
@@ -114,21 +139,9 @@ MonoBehaviour:
   xMax: 98
   yMin: -69
   yMax: 69
---- !u!114 &114000014006562544
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012789789448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2faecfc17e4cf64a8bfda5c6a09978c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputState: {fileID: 0}
-  forcedMove: 0
-  ignoreBounds: 0
-  target: {x: 0, y: 0}
+  shot: {fileID: 1000010396842076, guid: accf0e634f9bd4f259163ec8e904133a, type: 2}
+  shotSpawn: {fileID: 1000010984214350}
+  fireRate: 0.5
 --- !u!212 &212000010022477830
 SpriteRenderer:
   m_ObjectHideFlags: 1
