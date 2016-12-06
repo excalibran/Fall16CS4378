@@ -11,8 +11,9 @@ public class PlayerDeath : MonoBehaviour {
 	}
   //other.tag == "Enemy" || 
   void OnTriggerEnter2D(Collider2D other){
-		if (other.tag == "EnemyShot" || other.tag == "Mine") {
+		if (other.tag == "EnemyShot" || other.tag == "Mine" || other.tag == "Enemy") {
       GameObjectUtil.Instantiate(explode, transform.position);
+	  LifeTracker.lives--;
       gameObject.SetActive (false);
 		}
 	}
@@ -20,3 +21,4 @@ public class PlayerDeath : MonoBehaviour {
 	// Update is called once per frame
 
 }
+

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿	using UnityEngine;
 using System.Collections;
 
 public class Strategy : MonoBehaviour {
@@ -13,11 +13,13 @@ public class Strategy : MonoBehaviour {
 
   // Use this for initialization
   void Start () {
-    valid = false;
+    //valid = false;
   }
 
   public void deploy() {
-    for (int i = 0; i < pos.Rank-1; i++) {
+		Debug.Log (pos.Rank);
+    for (int i = 0; i < pos.Rank; i++) {
+			Debug.Log ("deploying");
       GameObjectUtil.Instantiate(spawners[i], pos[i]);
     }
   }
