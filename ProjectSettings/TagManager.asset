@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Shot
+  - PlayerShot
   - Enemy
+  - EnemyShot
+  - PlayerHurtExplosion
+  - EnemyHurtExplosion
+  - Shot
+  - Mine
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
