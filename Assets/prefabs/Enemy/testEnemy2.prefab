@@ -197,6 +197,7 @@ MonoBehaviour:
   reactShotType: {fileID: 1000012236723790, guid: f70f091128b7d41499d62388605391b5,
     type: 2}
   reactDirection: {x: 0, y: -1}
+  setReactMax: 0
 --- !u!114 &114000010542015480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acf2bea4486048aeb00dbdefecad70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 0
+  scoreValue: 10
 --- !u!212 &212000011466143758
 SpriteRenderer:
   m_ObjectHideFlags: 1
