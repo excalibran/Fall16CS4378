@@ -21,15 +21,14 @@ GameObject:
   - 4: {fileID: 4000010895326292}
   - 114: {fileID: 114000011373013670}
   - 114: {fileID: 114000012570764978}
+  - 114: {fileID: 114000013671791472}
   - 212: {fileID: 212000010586226248}
   - 50: {fileID: 50000012208176934}
   - 61: {fileID: 61000012608749040}
-  - 114: {fileID: 114000010622231240}
-  - 114: {fileID: 114000012859236514}
-  - 114: {fileID: 114000010808284946}
-  - 114: {fileID: 114000013748590090}
+  - 114: {fileID: 114000012113311810}
+  - 114: {fileID: 114000011737883926}
   m_Layer: 0
-  m_Name: BulletScatter
+  m_Name: BurstMain
   m_TagString: EnemyShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,36 +78,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
---- !u!114 &114000010622231240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012236723790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96762c19c74b64445890afb03ffb62bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnWhatOnDie: {fileID: 1000011239863114, guid: a64ba9b6bf4ca524f9a528ecdbc3fd17,
-    type: 2}
-  spawnOnSelfOnDie: 1
-  spawnWhereOnDie: {x: 0, y: 0}
---- !u!114 &114000010808284946
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012236723790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96762c19c74b64445890afb03ffb62bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnWhatOnDie: {fileID: 1000011877153620, guid: 1320539a03acaa5418227c6ef99ba4ec,
-    type: 2}
-  spawnOnSelfOnDie: 1
-  spawnWhereOnDie: {x: 0, y: 0}
 --- !u!114 &114000011373013670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +89,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4047a411805c309409e2e683a6ec6a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
+  velocity: {x: 0, y: -15}
+--- !u!114 &114000011737883926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012236723790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287983ca7e668b64c891890b3f35f837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 16
+--- !u!114 &114000012113311810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012236723790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789ae9ba2730546a5df9188217ca57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
 --- !u!114 &114000012570764978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38789ae9ba2730546a5df9188217ca57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 5
---- !u!114 &114000012859236514
+  duration: 2
+--- !u!114 &114000013671791472
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -144,23 +137,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96762c19c74b64445890afb03ffb62bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnWhatOnDie: {fileID: 1000013136180430, guid: 467d250c9393f4048b49edc4f4239688,
-    type: 2}
-  spawnOnSelfOnDie: 1
-  spawnWhereOnDie: {x: 0, y: 0}
---- !u!114 &114000013748590090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012236723790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96762c19c74b64445890afb03ffb62bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnWhatOnDie: {fileID: 1000013799225730, guid: ff5bec84830096c4ca061a7ac176adef,
-    type: 2}
+  spawnWhatOnDie:
+  - {fileID: 1000011286374406, guid: 6ee8bb580cbdb5f4ea02c3a424de346e, type: 2}
+  - {fileID: 1000013245424002, guid: 8d775a1c954318641a1738ebfd16d133, type: 2}
+  - {fileID: 1000011239863114, guid: a64ba9b6bf4ca524f9a528ecdbc3fd17, type: 2}
+  - {fileID: 1000013136180430, guid: 467d250c9393f4048b49edc4f4239688, type: 2}
+  - {fileID: 1000013137452504, guid: aae141c2f162cac44b369d4e275e6ad0, type: 2}
+  - {fileID: 1000013799225730, guid: ff5bec84830096c4ca061a7ac176adef, type: 2}
+  - {fileID: 1000011877153620, guid: 1320539a03acaa5418227c6ef99ba4ec, type: 2}
+  - {fileID: 1000012228664164, guid: 2d6c87ca186754d47811a1ba862839a6, type: 2}
   spawnOnSelfOnDie: 1
   spawnWhereOnDie: {x: 0, y: 0}
 --- !u!212 &212000010586226248
@@ -192,7 +177,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3306d6a8d81364887b889e4836ba106b, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 3306d6a8d81364887b889e4836ba106b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

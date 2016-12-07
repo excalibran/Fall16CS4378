@@ -20,9 +20,8 @@ public class EnemyProduction : MonoBehaviour {
 
   IEnumerator EvaluateStrats()
   {
-		//Debug.Log ("waiting");
     yield return new WaitForSeconds(evaluateRate);
-		//Debug.Log ("entering");
+
     for (int i = 0; i < regions.Rank; i++) {
       if (regions[i].playerHere) priority.x = i;
       if (regions[i].playerEnters > highest) {
@@ -35,7 +34,6 @@ public class EnemyProduction : MonoBehaviour {
       if (priority.x == spawnStrats[i].priority.x || priority.y == spawnStrats[i].priority.y) {
         spawnStrats[i].valid = true;
       }
-			//Debug.Log (spawnStrats[i].valid);
     }
 
     foreach (RegionData reg in regions) {
@@ -49,12 +47,11 @@ public class EnemyProduction : MonoBehaviour {
   }
 
   void SpawnStrats() {
-		//Debug.Log ("spawn");
     foreach (Strategy strat in spawnStrats) {
       if (strat.valid) {
-				Debug.Log ("ready");	
+				//Debug.Log ("ready");	
         strat.deploy();
-				//strat.valid = false;
+				strat.valid = false;
       }
       
     }

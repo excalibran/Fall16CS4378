@@ -3,77 +3,44 @@ using System.Collections;
 
 public class SmallWeapon : MonoBehaviour {
 
-  public GameObject shotType;
-  public GameObject reactShotType;
-  public RaycastHit2D reactDetect;
+  public GameObject shotType1;
+  public GameObject shotType2;
 
-  public Vector2 reactDirection;
-
-  public float setReactMax;
-  private float _reactDelayMin = 0;
-  public float reactDelayMin {
-    get { return _reactDelayMin; }
-  }
-
-  private float _reactDelayMax;
-  public float reactDelayMax {
-    get { return _reactDelayMax; }
+  public int normalFire;
+  public int setMax;
+  
+  private float _delayMax;
+  public float delayMax
+  {
+    get { return _delayMax; }
     set
     {
-      if (reactDelayMax > _reactDelayMin)
+      if (_delayMax <= 0)
       {
-        _reactDelayMax += value;
-      }
-    }
-  }
-
-  private float _normalDelay;
-  public float normalDelay {
-    get { return _normalDelay; }
-    set
-    {
-      if (_normalDelay <= 0)
-      {
-        _normalDelay = 3;
+        _delayMax = setMax;
       }
     }
   }
 
   // Use this for initialization
   void Start () {
-    StartCoroutine(regularShot());
-    reactDelayMax = 3;
-    normalDelay = 3;
+    delayMax = setMax;
 	}
 
   void FixedUpdate() {
-    reactDetect = Physics2D.Linecast(transform.position, new Vector2(transform.position.x,transform.position.y - 24), 1<<8);
-    if (reactDetect) {
-      Debug.Log("fire!");
-      StartCoroutine(reactShot());
+
+    if (normalFire <= 0) {
+      if (shotType1) {
+        GameObjectUtil.Instantiate(shotType1, transform.position);
+      }
+      if (shotType2) {
+        GameObjectUtil.Instantiate(shotType1, transform.position);
+      }
+      normalFire = (int)delayMax;
     }
-  }	
-  /**/
-  IEnumerator regularShot() {
-    yield return new WaitForSeconds(normalDelay);
-
-    GameObjectUtil.Instantiate(shotType, transform.position);
-    StartCoroutine(regularShot());
-  }
-
-  IEnumerator reactShot()
-  {
-    yield return new WaitForSeconds(Random.Range(reactDelayMin, reactDelayMax));
-
-    if (gameObject.activeSelf) {
-      GameObjectUtil.Instantiate(shotType, transform.position);
+    else
+    {
+      normalFire--;
     }
   }
-  /*
-  
-  void OnDestroy() {
-    reactDelayMax -= 0.1f;
-    reactDelayMin -= 0.1f;
-  }
-  */
 }

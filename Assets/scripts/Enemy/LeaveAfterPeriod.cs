@@ -8,7 +8,7 @@ public class LeaveAfterPeriod : MonoBehaviour {
   public int delay;
 	// Use this for initialization
 	void Start () {
-    move.GetComponent<MovingEntity>();
+    move = GetComponent<MovingEntity>();
     if (move != null) {
       StartCoroutine(addFinalWaypoint());
     }

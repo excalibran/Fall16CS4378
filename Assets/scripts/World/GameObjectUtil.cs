@@ -7,6 +7,7 @@ public class GameObjectUtil{
     private static Dictionary<RecycleGameObject, ObjectPool> pools = new Dictionary<RecycleGameObject, ObjectPool>();
   
     public static GameObject Instantiate(GameObject prefab, Vector3 pos) {
+
         GameObject instance = null;
 
         var recycledScript = prefab.GetComponent<RecycleGameObject>();
@@ -26,12 +27,11 @@ public class GameObjectUtil{
 
     public static void Destroy(GameObject gameObject) {
 
-        var recycleGameObject = gameObject.GetComponent<RecycleGameObject>();
-        var onDeath = gameObject.GetComponent<SpawnOnDeath>();
+    var recycleGameObject = gameObject.GetComponent<RecycleGameObject>();
+    var spawnOnDeath = gameObject.GetComponent<SpawnOnDeath>();
 
-    if (onDeath != null)
-    {
-      onDeath.spawnOnDeath();
+    if (spawnOnDeath) {
+      spawnOnDeath.deploy();
     }
 
 

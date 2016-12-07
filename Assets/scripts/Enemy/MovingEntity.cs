@@ -29,12 +29,10 @@ public class MovingEntity : MonoBehaviour
       if (_curWay < waypoint.Count - 1 && value != 0)
       {
         _curWay = value;
-        //Debug.Log("up " + _curWay);
       }
       else
       {
         _curWay = 0;
-        //Debug.Log(_curWay);
       }
     }
   }

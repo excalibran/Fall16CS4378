@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
 public class ScoreTracker : MonoBehaviour {
 
 	Text scoreTxt;
-
 
 	public static int score;
 	public static int newLifeScore;

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpawnOnDeath : MonoBehaviour {
 
-  public GameObject spawnWhatOnDie;
+  public GameObject[] spawnWhatOnDie;
   public bool spawnOnSelfOnDie = false;
   public Vector2 spawnWhereOnDie;
 
@@ -12,13 +12,14 @@ public class SpawnOnDeath : MonoBehaviour {
 
   }
 
-  public void spawnOnDeath() {
-
-    if (spawnOnSelfOnDie)
-    {
+  public void deploy()
+  {
+    if (spawnOnSelfOnDie){
       spawnWhereOnDie = transform.position;
     }
-    GameObjectUtil.Instantiate(spawnWhatOnDie, spawnWhereOnDie);
-  }
 
+    foreach (GameObject shot in spawnWhatOnDie) {
+      GameObjectUtil.Instantiate(shot, spawnWhereOnDie);
+    }
+  }
 }
