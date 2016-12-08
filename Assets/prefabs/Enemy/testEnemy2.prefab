@@ -193,11 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a90e0ea21692544cad19c62ac7a6aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotType: {fileID: 1000011286374406, guid: 6ee8bb580cbdb5f4ea02c3a424de346e, type: 2}
-  reactShotType: {fileID: 1000012236723790, guid: f70f091128b7d41499d62388605391b5,
-    type: 2}
-  reactDirection: {x: 0, y: -1}
-  setReactMax: 0
+  shotType1: {fileID: 0}
+  shotType2: {fileID: 0}
+  normalFire: 0
+  setMax: 0
 --- !u!114 &114000010542015480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acf2bea4486048aeb00dbdefecad70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 10
+  scoreValue: 5
 --- !u!212 &212000011466143758
 SpriteRenderer:
   m_ObjectHideFlags: 1

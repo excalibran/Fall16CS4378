@@ -34,7 +34,6 @@ public class ScoreTracker : MonoBehaviour {
 		}
 
 		if (superScore >= 20) {
-			Debug.Log ("Supper Added");
 			superScore = 0;
 		}
 	}

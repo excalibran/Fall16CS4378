@@ -62,6 +62,7 @@ GameObject:
   - 114: {fileID: 114000011223641222}
   - 114: {fileID: 114000013930007538}
   - 114: {fileID: 114000011778818480}
+  - 114: {fileID: 114000010856202112}
   m_Layer: 0
   m_Name: MLpatrolBottomRightQuad
   m_TagString: Enemy
@@ -184,6 +185,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: -25}
+--- !u!114 &114000010856202112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013226759352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349a714de7a312d4da98dbf0d94fad8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leavePoint: {x: 50, y: 200}
+  delay: 15
 --- !u!114 &114000011223641222
 MonoBehaviour:
   m_ObjectHideFlags: 1

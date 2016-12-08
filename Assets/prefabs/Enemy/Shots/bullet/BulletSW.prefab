@@ -26,6 +26,7 @@ GameObject:
   - 50: {fileID: 50000013565778914}
   - 114: {fileID: 114000010817323476}
   - 114: {fileID: 114000011989030790}
+  - 61: {fileID: 61000012250180576}
   m_Layer: 0
   m_Name: BulletSW
   m_TagString: EnemyShot
@@ -63,6 +64,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61000012250180576
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011877153620}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10}
 --- !u!114 &114000010791263712
 MonoBehaviour:
   m_ObjectHideFlags: 1

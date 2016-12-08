@@ -45,6 +45,7 @@ GameObject:
   - 61: {fileID: 61000010420555348}
   - 114: {fileID: 114000013231252038}
   - 114: {fileID: 114000013194663476}
+  - 114: {fileID: 114000012510634350}
   m_Layer: 0
   m_Name: SSPatrolLeft
   m_TagString: Enemy
@@ -176,6 +177,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d7938e97cc13a4892a887fc1446522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000012510634350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011382593586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349a714de7a312d4da98dbf0d94fad8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leavePoint: {x: 0, y: -220}
+  delay: 30
 --- !u!114 &114000012685956312
 MonoBehaviour:
   m_ObjectHideFlags: 1

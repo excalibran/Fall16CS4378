@@ -89,5 +89,6 @@ MonoBehaviour:
   - {fileID: 1000013226759352, guid: e8aedbfc85bc5e5419b805a75cd34eb7, type: 2}
   - {fileID: 1000013768282970, guid: 3c2701329a15140419f248c31ceea5f6, type: 2}
   - {fileID: 1000010571740786, guid: f84b170f8c8d9744e97e77bcb0afa160, type: 2}
-  delay: 3
+  delay: 2
   active: 1
+  maxSpawns: 5

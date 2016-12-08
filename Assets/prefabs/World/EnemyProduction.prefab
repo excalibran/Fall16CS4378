@@ -158,13 +158,16 @@ GameObject:
   - 114: {fileID: 114000013788904314}
   - 114: {fileID: 114000013067861342}
   - 114: {fileID: 114000012062016948}
+  - 114: {fileID: 114000013408512920}
+  - 114: {fileID: 114000010638620962}
+  - 114: {fileID: 114000010403536132}
   m_Layer: 0
   m_Name: EnemyProduction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000014046884988
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +464,48 @@ MonoBehaviour:
   id: 5
   delayOnDecrease: 1
   playerHere: 0
+--- !u!114 &114000010403536132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014012755858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cd9fd91582111499189235ef194198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stratName: FrontAssaultWithSneaky
+  priority: {x: 4, y: 7}
+  valid: 0
+  spawners:
+  - {fileID: 1000010787018372, guid: 3ee08ada7b47e8545b0e2ba0ed85bd39, type: 2}
+  - {fileID: 1000011643814738, guid: 17edeeafa1ee61946bc8458e1a997d79, type: 2}
+  - {fileID: 1000013460600864, guid: 05d43abc8f9d9401b9e55a2203b6403d, type: 2}
+  pos:
+  - {x: -20, y: 100}
+  - {x: 20, y: 100}
+  - {x: 125, y: 0}
+--- !u!114 &114000010638620962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014012755858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cd9fd91582111499189235ef194198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stratName: FrontAssault
+  priority: {x: 1, y: 4}
+  valid: 0
+  spawners:
+  - {fileID: 1000010787018372, guid: 3ee08ada7b47e8545b0e2ba0ed85bd39, type: 2}
+  - {fileID: 1000011643814738, guid: 17edeeafa1ee61946bc8458e1a997d79, type: 2}
+  pos:
+  - {x: 20, y: 100}
+  - {x: -20, y: 100}
 --- !u!114 &114000010856241392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,13 +559,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cd9fd91582111499189235ef194198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stratName: right
-  priority: {x: 0, y: 0}
+  stratName: PushFromRight
+  priority: {x: 5, y: 8}
   valid: 0
   spawners:
-  - {fileID: 1000012693190632, guid: a859c0c6ca4844a41b0d868438b98e85, type: 2}
+  - {fileID: 1000010310623120, guid: ee84b017c6baeda4cb10e87eb91dccb6, type: 2}
+  - {fileID: 1000011643814738, guid: 17edeeafa1ee61946bc8458e1a997d79, type: 2}
   pos:
-  - {x: 50, y: 100}
+  - {x: 125, y: 0}
+  - {x: 25, y: 100}
 --- !u!114 &114000012390832586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -546,13 +593,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cd9fd91582111499189235ef194198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stratName: left
-  priority: {x: 0, y: 0}
-  valid: 0
+  stratName: PushFromLeft
+  priority: {x: 3, y: 6}
+  valid: 1
   spawners:
-  - {fileID: 1000010597692206, guid: 5a4d90c551ed22a4696bddf89d1f3557, type: 2}
+  - {fileID: 1000011544112846, guid: 3c73c363a1136f64a9567a88b3089e0e, type: 2}
+  - {fileID: 1000011643814738, guid: 17edeeafa1ee61946bc8458e1a997d79, type: 2}
   pos:
-  - {x: -50, y: 100}
+  - {x: -125, y: 0}
+  - {x: -25, y: 100}
 --- !u!114 &114000013148426634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -567,6 +616,28 @@ MonoBehaviour:
   id: 3
   delayOnDecrease: 1
   playerHere: 0
+--- !u!114 &114000013408512920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014012755858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cd9fd91582111499189235ef194198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stratName: Pincer
+  priority: {x: 7, y: 8}
+  valid: 0
+  spawners:
+  - {fileID: 1000010652706252, guid: 789462212130eb84ba00bcb9c2420c76, type: 2}
+  - {fileID: 1000011537980428, guid: 028be6d65a5a5c841960bdaa92959081, type: 2}
+  - {fileID: 1000013460600864, guid: 05d43abc8f9d9401b9e55a2203b6403d, type: 2}
+  pos:
+  - {x: -50, y: 100}
+  - {x: 50, y: 100}
+  - {x: 0, y: -100}
 --- !u!114 &114000013788904314
 MonoBehaviour:
   m_ObjectHideFlags: 1

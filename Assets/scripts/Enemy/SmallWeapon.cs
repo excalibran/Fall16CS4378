@@ -34,7 +34,7 @@ public class SmallWeapon : MonoBehaviour {
         GameObjectUtil.Instantiate(shotType1, transform.position);
       }
       if (shotType2) {
-        GameObjectUtil.Instantiate(shotType1, transform.position);
+        GameObjectUtil.Instantiate(shotType2, transform.position);
       }
       normalFire = (int)delayMax;
     }

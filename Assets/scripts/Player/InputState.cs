@@ -10,7 +10,7 @@ public class InputState : MonoBehaviour {
 	public bool upArrow;
 
 	public bool acceptingInput = true;
-	public Vector2 target = Vector2.zero;
+	public static Vector2 target = Vector2.zero;
 	public Vector2 current = Vector2.zero;
 	public Vector2 calc = Vector2.zero;
 

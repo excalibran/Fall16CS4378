@@ -194,10 +194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a90e0ea21692544cad19c62ac7a6aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotType1: {fileID: 0}
+  shotType1: {fileID: 1000011286374406, guid: 6ee8bb580cbdb5f4ea02c3a424de346e, type: 2}
   shotType2: {fileID: 0}
   normalFire: 0
-  setMax: 0
+  setMax: 120
 --- !u!114 &114000010691416808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2faecfc17e4cf64a8bfda5c6a09978c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 25
   dodgeSpeed: 5
   target: {x: 0, y: 0}
   current: {x: 0, y: 0}

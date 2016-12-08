@@ -24,9 +24,11 @@ GameObject:
   - 114: {fileID: 114000013078513850}
   - 114: {fileID: 114000014155770460}
   - 114: {fileID: 114000012948670788}
+  - 50: {fileID: 50000012520047000}
+  - 61: {fileID: 61000012666933292}
   m_Layer: 0
   m_Name: RadioMine
-  m_TagString: Untagged
+  m_TagString: EnemyShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,12 +40,43 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010639497412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.6, y: 15.5, z: 0}
+  m_LocalPosition: {x: 70.6555, y: -66.82592, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000012520047000
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010639497412}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61000012666933292
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010639497412}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 14, y: 14}
 --- !u!95 &95000011516270092
 Animator:
   serializedVersion: 3
@@ -84,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349a714de7a312d4da98dbf0d94fad8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leavePoint: {x: 0, y: 0}
-  delay: 0
+  leavePoint: {x: 0, y: -200}
+  delay: 30
 --- !u!114 &114000014155770460
 MonoBehaviour:
   m_ObjectHideFlags: 1

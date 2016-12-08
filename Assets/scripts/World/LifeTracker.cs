@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class LifeTracker : MonoBehaviour {
-	
+
 	Text lifeTxt;
 	public static int lives;
 
@@ -17,6 +17,10 @@ public class LifeTracker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		lifeTxt.text = "x  " + lives;
+
+		if (lives == 0) {
+			GameOverText.gameOver = true;
+		}
 
 	}
 }
