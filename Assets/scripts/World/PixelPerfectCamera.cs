@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ Scales the camera such that sprites can be measured as one pixel per unit, solving a great many problems with
+ sprite scales
+   */
+
 public class PixelPerfectCamera : MonoBehaviour {
 
     public static float pixelsToUnits = 1f;

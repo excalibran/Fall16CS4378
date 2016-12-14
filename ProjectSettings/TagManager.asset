@@ -11,6 +11,8 @@ TagManager:
   - EnemyHurtExplosion
   - Shot
   - Mine
+  - Pool
+  - Production
   layers:
   - Default
   - TransparentFX

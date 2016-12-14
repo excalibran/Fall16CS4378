@@ -29,22 +29,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000011668664448
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000013140667954}
-  - 114: {fileID: 114000012803297868}
-  m_Layer: 0
-  m_Name: Weapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000013945574516
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +45,8 @@ GameObject:
   - 114: {fileID: 114000012289421788}
   - 61: {fileID: 61000014020093526}
   - 114: {fileID: 114000012550382348}
+  - 114: {fileID: 114000013940605652}
+  - 114: {fileID: 114000010818376526}
   m_Layer: 0
   m_Name: FSpathN-LeftToRight
   m_TagString: Enemy
@@ -88,27 +74,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013945574516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83, y: 58, z: 0}
+  m_LocalPosition: {x: -0.12429021, y: 28.84085, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010435329928}
-  - {fileID: 4000013140667954}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &4000013140667954
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011668664448}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000012375265158}
-  m_RootOrder: 1
 --- !u!50 &50000010439643080
 Rigidbody2D:
   serializedVersion: 2
@@ -171,6 +143,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 16, y: 16}
+--- !u!114 &114000010818376526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013945574516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011414505804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,10 +214,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   dodgeSpeed: 5
-  target: {x: 0, y: 0}
-  current: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  dodgeModifier: {x: 0, y: 0}
   waypoint:
   - {x: -80, y: 60}
   - {x: -80, y: -20}
@@ -252,12 +231,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodgeModifier: {x: 0, y: 0}
---- !u!114 &114000012803297868
+--- !u!114 &114000013940605652
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011668664448}
+  m_GameObject: {fileID: 1000013945574516}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a90e0ea21692544cad19c62ac7a6aa4, type: 3}

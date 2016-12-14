@@ -2,6 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+  One of a handful of static helper classes. This one overrides the default methods of instantiate and destruction 
+  in order to make automatic object recycling possible. With this, an object only needs the RecycleameObject type be present
+  in order to handle making its own object pool.
+*/
+
 public class GameObjectUtil{
 
     private static Dictionary<RecycleGameObject, ObjectPool> pools = new Dictionary<RecycleGameObject, ObjectPool>();
@@ -34,14 +40,12 @@ public class GameObjectUtil{
       spawnOnDeath.deploy();
     }
 
-
     if (recycleGameObject != null) {
             
             recycleGameObject.Shutdown();
             
         }
         else{
-            
             GameObject.Destroy(gameObject);
         }
     }

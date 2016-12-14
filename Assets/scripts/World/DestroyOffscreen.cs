@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+  /*
+ Destroys the object it is attached to when it meets certain position and velocity requirements. Became redundant as project
+ progressed and some objects had different requirements than others, requiring ad hoc solutions
+ */
+
 public class DestroyOffscreen : MonoBehaviour {
 
   public float offset = 16f;

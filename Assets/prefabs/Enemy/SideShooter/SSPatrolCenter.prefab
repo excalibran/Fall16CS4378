@@ -45,6 +45,7 @@ GameObject:
   - 114: {fileID: 114000010203561120}
   - 114: {fileID: 114000014041524058}
   - 114: {fileID: 114000011742036066}
+  - 114: {fileID: 114000013878863974}
   m_Layer: 0
   m_Name: SSPatrolCenter
   m_TagString: Enemy
@@ -192,6 +193,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodgeModifier: {x: 0, y: 0}
+--- !u!114 &114000013878863974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012233436684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000014041524058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,10 +217,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   dodgeSpeed: 5
-  target: {x: 0, y: 0}
-  current: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  dodgeModifier: {x: 0, y: 0}
   waypoint:
   - {x: -20, y: 50}
   - {x: -20, y: -50}

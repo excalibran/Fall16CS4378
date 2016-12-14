@@ -3,7 +3,9 @@ using System.Collections;
 
 public class BackgroundScroll : MonoBehaviour {
 
-	// Update is called once per frame
+	/*
+   creates scrolling effect fo star background
+  */
 	void Update () {
 		MeshRenderer mr = GetComponent<MeshRenderer>();
 		Material mat = mr.material;

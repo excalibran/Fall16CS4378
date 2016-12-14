@@ -22,6 +22,7 @@ GameObject:
   - 114: {fileID: 114000012830890822}
   - 61: {fileID: 61000011963966332}
   - 50: {fileID: 50000010351735112}
+  - 114: {fileID: 114000012518620522}
   m_Layer: 0
   m_Name: CoverCenterSpawn
   m_TagString: Untagged
@@ -73,6 +74,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 16, y: 16}
+--- !u!114 &114000012518620522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010787018372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012830890822
 MonoBehaviour:
   m_ObjectHideFlags: 1

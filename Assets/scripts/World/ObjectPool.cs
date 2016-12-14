@@ -2,6 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ Object pools are created as Lists of objects with the RecycleGameObject type
+   */
+
 public class ObjectPool : MonoBehaviour {
 
     public RecycleGameObject prefab;

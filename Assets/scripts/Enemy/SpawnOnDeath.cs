@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+ /*
+  Uses GameObjectUtil to spawn another object in the event the object this is attached to is destroyed.
+   */
+
 public class SpawnOnDeath : MonoBehaviour {
 
   public GameObject[] spawnWhatOnDie;

@@ -29,22 +29,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000011206844594
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000012855768268}
-  - 114: {fileID: 114000011368120958}
-  m_Layer: 0
-  m_Name: Weapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000013854983800
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +45,8 @@ GameObject:
   - 114: {fileID: 114000012982068978}
   - 61: {fileID: 61000013290903990}
   - 114: {fileID: 114000012697823896}
+  - 114: {fileID: 114000010569183304}
+  - 114: {fileID: 114000010273354098}
   m_Layer: 0
   m_Name: FSpathN-RightToLeft
   m_TagString: Enemy
@@ -75,27 +61,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013854983800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83, y: 58, z: 0}
+  m_LocalPosition: {x: -74.77087, y: -6.6468625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013581732500}
-  - {fileID: 4000012855768268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &4000012855768268
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011206844594}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000010380435562}
-  m_RootOrder: 1
 --- !u!4 &4000013581732500
 Transform:
   m_ObjectHideFlags: 1
@@ -171,6 +143,32 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 16, y: 16}
+--- !u!114 &114000010273354098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013854983800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000010569183304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013854983800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a90e0ea21692544cad19c62ac7a6aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotType1: {fileID: 1000011286374406, guid: 6ee8bb580cbdb5f4ea02c3a424de346e, type: 2}
+  shotType2: {fileID: 0}
+  normalFire: 0
+  setMax: 120
 --- !u!114 &114000010709416088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,10 +182,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   dodgeSpeed: 5
-  target: {x: 0, y: 0}
-  current: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  dodgeModifier: {x: 0, y: 0}
   waypoint:
   - {x: 80, y: 60}
   - {x: 80, y: -20}
@@ -205,21 +199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 16
---- !u!114 &114000011368120958
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011206844594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a90e0ea21692544cad19c62ac7a6aa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotType1: {fileID: 1000011286374406, guid: 6ee8bb580cbdb5f4ea02c3a424de346e, type: 2}
-  shotType2: {fileID: 0}
-  normalFire: 0
-  setMax: 120
 --- !u!114 &114000012697823896
 MonoBehaviour:
   m_ObjectHideFlags: 1

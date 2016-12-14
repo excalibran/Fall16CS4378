@@ -11,22 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000013226759352}
   m_IsPrefabParent: 1
---- !u!1 &1000010150834252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000010737475026}
-  - 114: {fileID: 114000013708731698}
-  m_Layer: 0
-  m_Name: Weapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000012922756058
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +47,7 @@ GameObject:
   - 114: {fileID: 114000013930007538}
   - 114: {fileID: 114000011778818480}
   - 114: {fileID: 114000010856202112}
+  - 114: {fileID: 114000013536019216}
   m_Layer: 0
   m_Name: MLpatrolBottomRightQuad
   m_TagString: Enemy
@@ -70,19 +55,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010737475026
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010150834252}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000013993802298}
-  m_RootOrder: 1
 --- !u!4 &4000013890898720
 Transform:
   m_ObjectHideFlags: 1
@@ -103,12 +75,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013226759352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17, y: -59, z: 0}
+  m_LocalPosition: {x: -7.6651096, y: 20.71364, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013890898720}
-  - {fileID: 4000010737475026}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!50 &50000011117337060
@@ -249,21 +220,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 16
---- !u!114 &114000013708731698
+--- !u!114 &114000013536019216
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010150834252}
+  m_GameObject: {fileID: 1000013226759352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a90e0ea21692544cad19c62ac7a6aa4, type: 3}
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotType1: {fileID: 0}
-  shotType2: {fileID: 0}
-  normalFire: 0
-  setMax: 0
 --- !u!114 &114000013930007538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,10 +244,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   dodgeSpeed: 5
-  target: {x: 0, y: 0}
-  current: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  dodgeModifier: {x: 0, y: 0}
   waypoint:
   - {x: 90, y: -20}
   - {x: 90, y: -60}

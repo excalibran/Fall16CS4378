@@ -2,6 +2,10 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/*
+ superScore is a remnant of an unimplemented game mechanic
+   */
+
 public class ScoreTracker : MonoBehaviour {
 
 	Text scoreTxt;
@@ -37,5 +41,4 @@ public class ScoreTracker : MonoBehaviour {
 			superScore = 0;
 		}
 	}
-
 }

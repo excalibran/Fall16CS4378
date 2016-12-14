@@ -22,6 +22,7 @@ GameObject:
   - 114: {fileID: 114000013732570094}
   - 61: {fileID: 61000011511817360}
   - 50: {fileID: 50000012962893842}
+  - 114: {fileID: 114000010335359378}
   m_Layer: 0
   m_Name: Spawner2
   m_TagString: Untagged
@@ -73,6 +74,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114000010335359378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012693190632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013732570094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,3 +100,4 @@ MonoBehaviour:
   - {fileID: 1000010185643962, guid: 367639c15bd74824b880dcb0392e4f67, type: 2}
   delay: 2
   active: 1
+  maxSpawns: 3

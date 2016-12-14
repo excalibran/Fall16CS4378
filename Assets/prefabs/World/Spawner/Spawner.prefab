@@ -22,6 +22,7 @@ GameObject:
   - 114: {fileID: 114000010701432384}
   - 61: {fileID: 61000011867830916}
   - 50: {fileID: 50000013233863968}
+  - 114: {fileID: 114000011032551308}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -92,3 +93,14 @@ MonoBehaviour:
   delay: 2
   active: 1
   maxSpawns: 5
+--- !u!114 &114000011032551308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010597692206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

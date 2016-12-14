@@ -46,6 +46,7 @@ GameObject:
   - 114: {fileID: 114000011496146380}
   - 114: {fileID: 114000012883206760}
   - 114: {fileID: 114000012877151330}
+  - 114: {fileID: 114000014113664394}
   m_Layer: 0
   m_Name: SSPatrolRight
   m_TagString: Enemy
@@ -218,10 +219,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   dodgeSpeed: 5
-  target: {x: 0, y: 0}
-  current: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  dodgeModifier: {x: 0, y: 0}
   waypoint:
   - {x: 80, y: 70}
   - {x: 10, y: 70}
@@ -239,6 +236,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 16
+--- !u!114 &114000014113664394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013245158896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000011914956510
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -46,6 +46,7 @@ GameObject:
   - 114: {fileID: 114000013231252038}
   - 114: {fileID: 114000013194663476}
   - 114: {fileID: 114000012510634350}
+  - 114: {fileID: 114000011924191498}
   m_Layer: 0
   m_Name: SSPatrolLeft
   m_TagString: Enemy
@@ -142,6 +143,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 16, y: 16}
+--- !u!114 &114000011924191498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011382593586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b2f73380a548e409f46073627fa7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011925229636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -203,10 +215,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   dodgeSpeed: 5
-  target: {x: 0, y: 0}
-  current: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  dodgeModifier: {x: 0, y: 0}
   waypoint:
   - {x: -80, y: 70}
   - {x: -10, y: 70}

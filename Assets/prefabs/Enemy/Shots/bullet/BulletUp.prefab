@@ -25,6 +25,7 @@ GameObject:
   - 212: {fileID: 212000012841962454}
   - 50: {fileID: 50000012787862828}
   - 61: {fileID: 61000013915685156}
+  - 114: {fileID: 114000010401725254}
   m_Layer: 0
   m_Name: BulletUp
   m_TagString: EnemyShot
@@ -76,6 +77,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
+--- !u!114 &114000010401725254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012228664164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d7938e97cc13a4892a887fc1446522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010480605550
 MonoBehaviour:
   m_ObjectHideFlags: 1

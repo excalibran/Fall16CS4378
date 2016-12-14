@@ -2,10 +2,16 @@
 using System.Collections;
 using System;
 
+/*
+ The regions used for enemy production use Unity collision volumes to detect where the player is moving.
+ The regions track wether the player is in this region at the moment, and how many times they've entered
+ the region. The cap on the number of times the player entered is a remnant of when the method of obtaining the
+ number was more complicated.
+*/
+
 public class RegionData : MonoBehaviour
 {
   public int id;
-  public float delayOnDecrease = 1f;
 
   public bool playerHere;
 
@@ -22,10 +28,8 @@ public class RegionData : MonoBehaviour
     }
   }
 
-  // Use this for initialization
   void Start()
   {
-    //StartCoroutine(decreaseValues());
   }
   
   void OnTriggerEnter2D(Collider2D other) {
@@ -55,21 +59,4 @@ public class RegionData : MonoBehaviour
     playerHere = false;
     playerEnters = 0;
   }
-/*
-  IEnumerator increaseValue() {
-    yield return new WaitForSeconds(delayOnDecrease);
-
-    playerHere += 1;
-  }
-
-  IEnumerator decreaseValues() {
-    yield return new WaitForSeconds(delayOnDecrease);
-
-      playerHere -= 1;
-      playerEnters -= 1;
-    
-    StartCoroutine(decreaseValues());
-  }
-  */
-  //end
 }
